@@ -1,0 +1,11 @@
+version: "3.10.5"
+services:
+  app:
+   build: .
+   volumes:
+    - .:/django
+   ports:
+    - 8000:8000
+   image: docker_image_1
+   container_name: docker_container_1
+   command: python manage.py runserver 0.0.0.0:8000
