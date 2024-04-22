@@ -82,7 +82,11 @@ class OCRAPIView(APIView):
             return Response({'status_patient': extracted_details['status_patient'], 'hemoglobin': extracted_details['details_OCR_CBC']['Hemoglobin']})
         else:
             return Response({'error': 'No Image Find.'}, status=400)
-
+    
+    def head(self, request, *args, **kwargs):
+        # Respond to HEAD requests without any body
+        return Response()
+    
 def preprocess_details(text):
     ranges = {
         'WBC': (4.12, 11.12),
