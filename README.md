@@ -80,6 +80,10 @@ The API returns a JSON response with the extracted details and patient status:
 
 The `status_patient` field indicates whether the patient's CBC report falls within acceptable ranges. If any detail is outside the acceptable range, `status_patient` will be set to "Not Good".
 
+
+## Host Link
+https://radwan-ocr-api.onrender.com/
+
 ## Requirements
 
 - Python (3.x recommended)
