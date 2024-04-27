@@ -26,7 +26,7 @@ def extract_values_from_text(text):
             values['Hemoglobin'] = hemoglobin_value.group() if hemoglobin_value else None
     return values
 
-def build_model_and_predict(values):
+def pridict(values):
     platelet_min = 150
     platelet_max = 400
     rbc_min = 4.40
@@ -75,7 +75,7 @@ def process_image(image_data):
 
         values = extract_values_from_text(text)
 
-        result, hemoglobin_value = build_model_and_predict(values)
+        result, hemoglobin_value = pridict(values)
         return result, hemoglobin_value
     except pytesseract.TesseractError as e:
         return "Tesseract Error: " + str(e), None
